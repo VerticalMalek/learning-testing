@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Grid</title>
+  <style>
+    .grid{
+      display:grid;
+      /* grid-template-columns:1fr 1fr 1fr;*/
+      grid-template-columns:repeat(3, 1fr);
+      grid-gap:1em;
+      /* grid-auto-rows:100px; */
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .gniazdo{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      grid-auto-rows: 70px;
+      grid-gap:1em;
+    }
+
+    .grid > div{
+      background:#eee;
+      padding:1em;
+    }
+    .grid > div:nth-child(odd){
+      background:#ddd;
+    }
+
+    .gniazdo > div{
+      border:#333 1px solid;
+      padding:1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quibusdam tenetur placeat animi. Ducimus dolores debitis doloremque natus ipsum numquam, quas sint nobis maiores, reprehenderit in nihil earum, vitae consequatur.10
+    </div>
+    <div>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque culpa cum, vero doloremque facere aspernatur quo pariatur ipsa quam nemo?    </div>
+    <div class="gniazdo">
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+    </div>
+    <div>
+      Lorem ipsum dolor sit.
+    </div>
+    <div>
+      Lorem ipsum dolor sit.
+    </div>
+    <div>
+      Lorem ipsum dolor sit.
+    </div>
+    <div>
+      Lorem ipsum dolor sit.
+    </div>
+  </div>
+</body>
+</html>
